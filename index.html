@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Code Snippet Manager</h1>
+<p class="subtitle">Save, organize, and search your code snippets</p>
+        
+        <!-- Search Bar -->
+        <div class="search-section">
+            <input type="text" id="searchInput" placeholder="Search snippets by title, language, or tags...">
+        </div>
+
+        <!-- Add Snippet Form -->
+        <div class="add-section">
+            <h2>Add New Snippet</h2>
+            <div class="form-row">
+    <input type="text" id="titleInput" placeholder="Title (e.g., 'Quick Sort Implementation')">
+    <input type="text" id="languageInput" placeholder="Language (e.g., 'JavaScript', 'Python')">
+</div>
+            <input type="text" id="tagsInput" placeholder="Tags (comma separated, e.g., 'algorithm, sorting')">
+            <textarea id="codeInput" placeholder="Paste your code here..." rows="8"></textarea>
+            <textarea id="descriptionInput" placeholder="Description (optional)" rows="3"></textarea>
+            <button id="addBtn">Add Snippet</button>
+        </div>
+
+        <!-- Snippets Display -->
+        <div class="snippets-section">
+            <h2>Your Snippets (<span id="snippetCount">0</span>)</h2>
+            <div id="snippetsList"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

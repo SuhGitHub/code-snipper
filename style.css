@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #000000;
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Header */
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+/* Search Section */
+.search-section {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 18px 24px 18px 55px;
+    font-size: 16px;
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 12px;
+    color: #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+#searchInput::placeholder {
+    color: #64748b;
+}
+
+.search-section::before {
+    content: "🔍";
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.3em;
+}
+
+/* Add Section */
+.add-section {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    border: 2px solid #334155;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.add-section h2 {
+    color: #e2e8f0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: #0f172a;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #e2e8f0;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    font-family: 'Fira Code', 'Courier New', monospace;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #64748b;
+}
+
+#addBtn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+#addBtn:active {
+    transform: translateY(0);
+}
+
+/* Snippets Section */
+.snippets-section h2 {
+    color: #e2e8f0;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+#snippetCount {
+    color: #667eea;
+    font-weight: 700;
+}
+
+.snippet-card {
+    background: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.snippet-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+.snippet-card:hover {
+    border-color: #667eea;
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+    transform: translateY(-2px);
+}
+
+.snippet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.snippet-title {
+    font-size: 1.4em;
+    color: #f1f5f9;
+    font-weight: 600;
+    flex: 1;
+}
+
+.snippet-language {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.snippet-tags {
+    margin: 12px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #334155;
+    color: #cbd5e1;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background: #475569;
+    transform: translateY(-1px);
+}
+
+.snippet-code {
+    background: #0f172a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    border: 1px solid #334155;
+    color: #94a3b8;
+}
+
+.snippet-description {
+    color: #94a3b8;
+    margin: 12px 0;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.snippet-meta {
+    color: #64748b;
+    font-size: 0.85em;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.snippet-meta::before {
+    content: "📅";
+}
+
+.delete-btn {
+    background: #ef4444;
+    padding: 10px 24px;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .snippet-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Empty state */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #64748b;
+}
+
+.empty-state-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.empty-state-text {
+    font-size: 1.2em;
+    color: #94a3b8;
+}

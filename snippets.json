@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1766601195268,
+    "title": "Hello World",
+    "language": "python",
+    "tags": "beginner, tutorial",
+    "code": "print(\"Hello World\")",
+    "description": "",
+    "createdAt": "2025-12-24T18:33:15.268Z"
+  },
+  {
+    "id": 1766601237885,
+    "title": "Hi",
+    "language": "C++",
+    "tags": "easy",
+    "code": "cout<<\"Hello World\";",
+    "description": "",
+    "createdAt": "2025-12-24T18:33:57.885Z"
+  }
+]
